@@ -1,5 +1,5 @@
 function setup() {
-  createCanvas(700,700);
+  createCanvas(windowWidth,windowHeight);
 }
 
 function draw() {
@@ -13,16 +13,15 @@ function draw() {
   fill(0,0,200)
   
 } 
-    
+  rectMode(CORNER)  
   fill('#EBD595');
-  rect(0, 600, 1500, 500);// Grond
+  rect(0,350,windowWidth,windowHeight);// Grond
     
   if (mouseIsPressed == true) {
   fill('#CC9460');
-  rect(0, 600, 1500, 500);// Grond Donker
+  rect(0,350,windowWidth,windowHeight);// Grond Donker
     }
-  
-  //Robot
+ rectMode(CENTER)
   
   if (mouseIsPressed == false) {
   fill('#CC2F0B');
@@ -79,7 +78,7 @@ function draw() {
   strokeWeight(10); //"Hard pencil"
 
   for (i = 0; i < 2; i++) {
-  point(random(700), random(350));
+  point(random(windowWidth), random(350));
   }
     
   strokeWeight(4);
@@ -129,5 +128,3 @@ function draw() {
 
   
   }
-
-  
