@@ -80,6 +80,7 @@ function draw() {
   fill(255,215,0);
   arc(525, 347, 200, 200, PI, TWO_PI)
   
+  
   } 
   
   if (mouseIsPressed == true) {
