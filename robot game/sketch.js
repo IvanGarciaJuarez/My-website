@@ -1,33 +1,40 @@
-const dino = document.getElementById("dino");
-const rock = document.getElementById("rock");
+const Robot = document.getElementById("Robot");
+const Blok = document.getElementById("Blok");
 const score = document.getElementById("score");
+let BGMusic; 
+
+ 
+function preload() {
+  BGMusic = loadSound("Sound.mp3"); 
+  Loadsounds();
+}
 
 function jump() {
-  dino.classList.add("jump-animation");
+  Robot.classList.add("jump-animation");
   setTimeout(() =>
-    dino.classList.remove("jump-animation"), 500);
+    Robot.classList.remove("jump-animation"), 500);
 }
 
 document.addEventListener('keypress', (event) => {
-  if (!dino.classList.contains('jump-animation')) {
+  if (!Robot.classList.contains('jump-animation')) {
     jump();
   }
 })
 
 setInterval(() => {
-  const dinoTop = parseInt(window.getComputedStyle(dino)
+  const RobotTop = parseInt(window.getComputedStyle(Robot)
     .getPropertyValue('top'));
-  const rockLeft = parseInt(window.getComputedStyle(rock)
+  const BlokLeft = parseInt(window.getComputedStyle(Blok)
     .getPropertyValue('left'));
   score.innerText++;
 
-  if (rockLeft < 0) {
-    rock.style.display = 'none';
+  if (BlokLeft < 0) {
+    Blok.style.display = 'none';
   } else {
-    rock.style.display = ''
+    Blok.style.display = ''
   }
 
-  if (rockLeft < 50 && rockLeft > 0 && dinoTop > 150) {
+  if (BlokLeft < 50 && BlokLeft > 0 && RobotTop > 150) {
     alert("You got a score of: " + score.innerText +
       "\n\nPlay again?");
     location.reload();

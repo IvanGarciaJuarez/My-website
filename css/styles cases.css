@@ -26,7 +26,7 @@ body {
   overflow: hidden;
   background-color: #333;
   position: fixed; /* Set the navbar to fixed position */
-  width: 100%;
+  left: 90%;
 }
 
 /* Style the navigation bar links */
@@ -94,7 +94,8 @@ body {
 .footer {
   padding: 20px;
   text-align: center;
-  background: #799797;
+  background: #000000;
+  color: white;
 }
 
 /* Responsive layout - when the screen is less than 700px wide, make the two columns stack on top of each other instead of next to each other */
@@ -295,10 +296,6 @@ img {
 }
 
 /*text bloks*/
-
-
-
-
 
 
 

@@ -7,6 +7,9 @@ function draw() {
   stroke('black');
   background(0,229,238);
   rectMode(CENTER)
+  textSize(50);
+  text('Klik op de linkermuisknop', 500, 50);
+  fill('black');
   
    if (mouseIsPressed == true) {
   background(0,0,200);

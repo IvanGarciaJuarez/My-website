@@ -65,7 +65,7 @@ footer {
   overflow: hidden;
   background-color: #222122;
   position: fixed; /* Set the navbar to fixed position */
-  width: 100%;
+  left: 90%;
 }
 
 /* Style the navigation bar links */
